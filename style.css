@@ -5,13 +5,13 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
 html,
 body {
   overflow-x: hidden;
   height: 100%;
-  font-family: 'Open Sans', sans-serif;
   font-size: 10px;
   scroll-behavior: smooth;
   line-height: 1.5;
@@ -77,7 +77,7 @@ section {
 }
 
 .footer-tweets-section__tweets-div {
-  padding: 5rem;
+  padding: 0 5rem;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -96,6 +96,8 @@ section {
   font-size: 5rem;
   margin: 4rem 0;
   color: #506d6f;
+  -webkit-text-decoration: underline dotted 3px;
+          text-decoration: underline dotted 3px;
 }
 
 .footer-tweets-section__tweets-div__news-grid-container {
@@ -451,7 +453,7 @@ textarea::placeholder {
 }
 
 .about-section__cards-holder__card-row__card__front {
-  background-color: #f3f4f4;
+  background-color: #ffffff;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   position: absolute;
@@ -480,7 +482,7 @@ textarea::placeholder {
 }
 
 .about-section__cards-holder__card-row__card__back {
-  background-color: #f3f4f4;
+  background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,6 +521,7 @@ textarea::placeholder {
 }
 
 .landing-section {
+  height: 60vh !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -534,7 +537,7 @@ textarea::placeholder {
 }
 
 .landing-section__header-wrapper {
-  width: 43%;
+  width: 45%;
 }
 
 .landing-section__logo-wrapper {
@@ -554,7 +557,7 @@ textarea::placeholder {
 .landing-section__header {
   font-size: 5rem;
   color: #506d6f;
-  margin-bottom: 5%;
+  margin: 10% 0;
 }
 
 .landing-section__sub-header {
@@ -636,7 +639,9 @@ textarea::placeholder {
 }
 
 .landing-section__banner-svg {
-  width: 30%;
+  height: 55%;
+  margin-bottom: 10rem;
+  margin-right: 10rem;
 }
 
 .active-slide {
