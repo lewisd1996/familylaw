@@ -4,10 +4,10 @@
     position: relative;
     z-index: 1000;
     border-bottom: 3px solid $base-color;
-    background-color: $base-color-grey-light;
+    background-color: $base-color-white-light;
     padding: 0 10%;
     &__header-wrapper {
-        width: 40%;
+        width: 43%;
     }
     &__logo-wrapper {
         width: 100%;
@@ -22,12 +22,22 @@
         margin-bottom: 5%;
     }
     &__sub-header {
-        font-size: 1.25rem;
+        font-size: 5rem;
         color: $base-color-grey-dark;
-        margin-bottom: 5%;
+    }
+    &__slider-section {
+        position: absolute;
+        width: 80%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        opacity: 0;
+        transition: opacity 2s;
+        pointer-events: none;
     }
     &__video-btn {
-        width: 20rem;
+        width: 30rem;
         min-height: 50px;
         background-color: $base-color-grey-dark;
         padding: 0px 20px 0 20px;
@@ -39,7 +49,7 @@
         cursor: pointer;
         transition: all .25s;
         border: 3px solid transparent;
-        margin-right: 5% !important;
+        margin: 5% 0;
         &:hover {
             border: 3px solid $base-color-grey-dark;
             background-color: transparent;
@@ -74,11 +84,13 @@
         color: $base-color-grey-dark;
     }
     &__banner-svg {
-        position: absolute;
-        right: 5%;
-        top: 20%;
-        width: 40%;
+        width: 30%;
     }
+}
+
+.active-slide {
+    opacity: 1;
+    pointer-events: all;
 }
 
 .move-arrow {

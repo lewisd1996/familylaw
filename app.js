@@ -1,6 +1,11 @@
 var Controller = (function() {
+
     //EVENT LISTENERS-----------------------------------------------------------
     try {
+
+        BarristerSlide = document.getElementById('BarristerSlide');
+        ConsultationSlide = document.getElementById('ConsultationSlide');
+        ManagedDivorceSlide = document.getElementById('ManagedDivorceSlide');
         document.querySelector(".footer-tweets-section__tweets-div__news-grid-container").addEventListener("mouseenter", UIController.showNewsSelector);
         document.querySelector(".footer-tweets-section__tweets-div__news-grid-container").addEventListener("mouseleave", UIController.hideNewsSelector);
         menuIconBar1 = document.getElementById('menuIconBar1');
@@ -29,6 +34,8 @@ var Controller = (function() {
 });
 //-----------------------------------------------------------
 var UIController = (function() {
+    var slideCounter = 0;
+    var ExpertCurrentPage = 1;
     try {
         //-----------------------------------------------------------
         questionnaireScrollArrow1 = document.getElementById("questionnaireScrollArrow1");
@@ -36,7 +43,7 @@ var UIController = (function() {
         questionnaireScrollArrow3 = document.getElementById("questionnaireScrollArrow3");
         questionnaireScrollArrow4 = document.getElementById("questionnaireScrollArrow4");
         //-----------------------------------------------------------EXPERT QUESTIONNAIRE DOM STRINGS-----------------------------------------------------------
-        var ExpertCurrentPage = 1;
+
         //---EXPERT PAGES---
         questionnaireExpertPage1 = document.getElementById("expertPage1");
         questionnaireExpertPage2 = document.getElementById("expertPage2");
@@ -100,6 +107,25 @@ var UIController = (function() {
                     document.getElementById("nav-bar").style.pointerEvents = "none";
                 }
             }
+        }),
+        changeLandingSlide: (function() {
+            slideCounter += 1;
+            if (slideCounter === 1) {
+                BarristerSlide.classList.remove('active-slide');
+                ConsultationSlide.classList.add('active-slide');
+                ManagedDivorceSlide.classList.remove('active-slide');
+            } else if (slideCounter === 2) {
+                BarristerSlide.classList.remove('active-slide');
+                ConsultationSlide.classList.remove('active-slide');
+                ManagedDivorceSlide.classList.add('active-slide');
+            } else if (slideCounter === 3) {
+                BarristerSlide.classList.add('active-slide');
+                ConsultationSlide.classList.remove('active-slide');
+                ManagedDivorceSlide.classList.remove('active-slide');
+            } else if (slideCounter === 4) {
+                slideCounter = 0;
+            }
+
         }),
         //-----------------------------------------------------------
         updateNav: (function() {
@@ -370,6 +396,7 @@ var UIController = (function() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     Controller();
+    setInterval(UIController.changeLandingSlide, 8000);
     UIController.createNewsSelector();
     UIController.hideNewsSelector();
     //-----------------------------------------------------------
