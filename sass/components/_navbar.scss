@@ -1,0 +1,200 @@
+.sidemenu {
+    height: 100vh;
+    width: 25%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: $base-color-grey-dark;
+    z-index: 5001;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -25%;
+    transition: all 0.5s;
+    padding-top: 50px;
+    &__link-background {
+        position: absolute;
+        background-color: $base-color-white;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: -200%;
+        transition: all .5s;
+        border-radius: 25px;
+    }
+}
+
+.sidemenu ul {
+    list-style: none;
+}
+
+.sidemenu ul li {
+    position: relative;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    &:hover div {
+        left: 0;
+        top: 0;
+    }
+    &:hover a {
+        color: $base-color-grey-dark;
+    }
+    cursor: pointer;
+}
+
+.sidemenu a {
+    position: inherit;
+    text-decoration: none;
+    font-size: 2rem;
+    color: $base-color-white;
+    transition: all 0.5s;
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    line-height: 1.75;
+}
+
+#menuCheckbox {
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu-icon {
+    z-index: 10;
+    position: absolute;
+    top: 30px;
+    opacity: 1;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 40px;
+    height: 5px;
+    background-color: $base-color-white;
+    margin: 0.5rem 0;
+    transition: 0.4s;
+}
+
+.changeBar1 {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.changeBar3 {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.arrow-background {
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    background-color: $base-color-grey-dark;
+}
+
+.expand-arrow {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
+    text-align: center;
+    transition: all 0.7s;
+    color: $base-color-white;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+}
+
+.email {
+    cursor: pointer;
+    z-index: 5000;
+    font-size: 2rem;
+    color: $base-color-grey-dark;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    text-align: center;
+    position: absolute;
+    bottom: 10%;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s;
+    &:hover {
+        color: $base-color-tertiary;
+        border-bottom: 2px solid $base-color-white;
+    }
+}
+
+.phone-number {
+    cursor: pointer;
+    z-index: 5000;
+    font-size: 2rem;
+    color: $base-color-grey-dark;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    text-align: center;
+    position: absolute;
+    bottom: 30%;
+    border-bottom: 2px solid transparent;
+    transition: all 0.5s;
+    &:hover {
+        color: $base-color-tertiary;
+        border-bottom: 2px solid $base-color-white;
+    }
+}
+
+.menu-tab {
+    z-index: 4999;
+    position: fixed;
+    height: 100vh;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: $base-color;
+    color: $base-color-white;
+    cursor: pointer;
+}
+
+.menu-footer {
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    font-size: 2rem;
+    color: $base-color-white;
+    transition: all 0.5s;
+    margin-top: 5rem;
+}
+
+.nav-bar__logo {
+    width: 200px;
+}
+
+.phone-number-background {
+    position: absolute;
+    top: 16.5%;
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.email-background {
+    position: absolute;
+    bottom: 17.5%;
+    width: 100px;
+    height: 100%;
+    overflow: hidden;
+}

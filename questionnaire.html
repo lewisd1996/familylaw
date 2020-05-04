@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-with, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <title>Family Law Claims</title>
+</head>
+
+<body>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="sidemenu" id="sideMenu">
+        <ul>
+            <li href="index.html">
+                <div class="sidemenu__link-background"></div>
+                <a href="index.html">Home</a>
+            </li>
+            <li href="#aboutSection">
+                <div class="sidemenu__link-background"></div>
+                <a href="#aboutSection">About Us</a>
+            </li>
+            <li href="#">
+                <div class="sidemenu__link-background"></div>
+                <a href="#">Claims Against Experts</a>
+            </li>
+            <li href="#">
+                <div class="sidemenu__link-background"></div>
+                <a href="#">Claims Against Cafcass Officers</a>
+            </li>
+            <li href="#">
+                <div class="sidemenu__link-background"></div>
+                <a href="#">Claims Against a Solicitor or Barrister</a>
+            </li>
+            <li href="questionnaire.html">
+                <div class="sidemenu__link-background"></div>
+                <a href="questionnaire.html">Questionnaire</a>
+            </li>
+            <li href="#">
+                <div class="sidemenu__link-background"></div>
+                <a href="#">FAQs</a>
+            </li>
+            <li href="#contactSection">
+                <div class="sidemenu__link-background"></div>
+                <a href="#contactSection">Contact Us</a>
+            </li>
+        </ul>
+        <ul class="menu-footer">
+            <li>Tel: +44 (0)12 3456 7899</li>
+            <li>abcde@fgh.com</li>
+            <li>10 Insert Address Somewhere AB1 2CD</li>
+        </ul>
+    </div>
+    <div class="menu-tab" id="menuArrow">
+        <p class="phone-number">01942 567890</p>
+        <i class="fa fa-angle-right fa-5x expand-arrow" id="menuArrowSpin"></i>
+        <p class="email">hello@email.com</p>
+    </div>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <section class="questionnaire-section__type-selector-wrapper">
+        <h1 class="questionnaire-section__type-selector-wrapper__title">
+            Step 1
+        </h1>
+        <h2 class="questionnaire-section__type-selector-wrapper__sub-title">
+            Select your type of case.
+        </h2>
+        <div class="three-way-toggle">
+            <div id="option1" class="switch2 option1">
+                <p id="option1-p">Expert</p>
+            </div>
+            <div id="option2" class="switch2 option2">
+                <p id="option2-p">Barrister/Solicitor</p>
+            </div>
+            <div id="option3" class="switch2 option3">
+                <p id="option3-p">Cafcass</p>
+            </div>
+            <div id="selector" class="selector"></div>
+        </div>
+        <a href="#questionnaireSection" id="questionnaireScrollArrow1" class="questionnaire-section__down-arrow-white"><i class="fa fa-angle-double-down down-arrow"></i></a>
+    </section>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <section class="questionnaire-section__questions-wrapper" id="questionnaireSection">
+        <!--------------------------------------------------------EXPERT QUESTIONNAIRE-------------------------------------------------->
+        <div class="questionnaire-section__questions-wrapper__questionnaire
+            questionnaire-section__questions-wrapper__questionnaire-choice-1" id="questionnaire1">
+            <div class="questionnaire-section__questions-wrapper__questionnaire__container">
+                <h1 class="questionnaire-section__questions-wrapper__questionnaire__title">
+                    Step 2
+                </h1>
+                <h2 class="questionnaire-section__questions-wrapper__questionnaire__sub-title">
+                    Fill in Your Questionnaire (Expert)
+                </h2>
+                <!--------------------------------------------------------EXPERT PROGRESS CIRCLES-------------------------------------------------->
+                <div class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div">
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__1" id="expertCircle1">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress" id="expertPage1InProgress">
+                            1
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon" id="expertPage1Completed"></i>
+                        <i class="fa fa-caret-up fa-4x questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__current-page-icon active-arrow" id="expertPage1CurrentArrow"></i>
+                    </div>
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__2" id="expertCircle2">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress" id="expertPage2InProgress">
+                            2
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon" id="expertPage2Completed"></i>
+                        <i class="fa fa-caret-up fa-4x questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__current-page-icon" id="expertPage2CurrentArrow"></i>
+                    </div>
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__3" id="expertCircle3">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress" id="expertPage3InProgress">
+                            3
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon" id="expertPage3Completed"></i>
+                        <i class="fa fa-caret-up fa-4x questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__current-page-icon" id="expertPage3CurrentArrow"></i>
+                    </div>
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__4" id="expertCircle4">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress" id="expertPage4InProgress">
+                            4
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon" id="expertPage4Completed"></i>
+                        <i class="fa fa-caret-up fa-4x questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__current-page-icon" id="expertPage4CurrentArrow"></i>
+                    </div>
+                </div>
+                <div class="questionnaire-section__questions-wrapper__questionnaire__container__questions">
+                    <form class="questionnaire-section__questions-wrapper__questionnaire__container__questions__form" id="expertForm" onsubmit="return false">
+                        <!--------------------------------------------------------EXPERT PAGE 1-------------------------------------------------->
+                        <ul class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list active-page" id="expertPage1">
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="Question1Expert" id="question-1-page-1-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="Question2Expert" id="question-2-page-1-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="Question3Expert" id="question-3-page-1-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="Question4Expert" id="question-4-page-1-expert" required>
+                            </li>
+                        </ul>
+                        <!--------------------------------------------------------EXPERT PAGE 2-------------------------------------------------->
+                        <ul class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list hidden-page" id="expertPage2">
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                What's your name?
+                                <input type="text" name="Question1Expert" id="question-1-page-2-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                What's your name?
+                                <input type="text" name="Question2Expert" id="question-2-page-2-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                What's your name?
+                                <input type="text" name="Question3Expert" id="question-3-page-2-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                What's your name?
+                                <input type="text" name="Question4Expert" id="question-4-page-2-expert" required>
+                            </li>
+                        </ul>
+                        <!--------------------------------------------------------EXPERT PAGE 3-------------------------------------------------->
+                        <ul class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list hidden-page" id="expertPage3">
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Can you fly?
+                                <input type="text" name="Question1Expert" id="question-1-page-3-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Can you fly?
+                                <input type="text" name="Question2Expert" id="question-2-page-3-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Can you fly?
+                                <input type="text" name="Question3Expert" id="question-3-page-3-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Can you fly?
+                                <input type="text" name="Question4Expert" id="question-4-page-3-expert" required>
+                            </li>
+                        </ul>
+                        <!--------------------------------------------------------EXPERT PAGE 4-------------------------------------------------->
+                        <ul class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list hidden-page" id="expertPage4">
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Who are you?
+                                <input type="text" name="Question1Expert" id="question-1-page-4-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Who are you?
+                                <input type="text" name="Question2Expert" id="question-2-page-4-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Who are you?
+                                <input type="text" name="Question3Expert" id="question-3-page-4-expert" required>
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Who are you?
+                                <input type="text" name="Question4Expert" id="question-4-page-4-expert" required>
+                            </li>
+                        </ul>
+                        <!--------------------------------------------------------EXPERT BUTTONS-------------------------------------------------->
+                        <div class="questionnaire-section__questions-wrapper__questionnaire__container__questions__button-wrapper">
+                            <button class="questionnaire-section__questions-wrapper__questionnaire__container__questions__button-wrapper__page-btn" id="expertPrevBtn">Prev</button>
+                            <button class="questionnaire-section__questions-wrapper__questionnaire__container__questions__button-wrapper__page-btn" id="expertNextBtn">Next</button>
+                        </div>
+                    </form>
+
+                </div>
+                <a href="#sendQuestionnaireSection" id="questionnaireScrollArrow2" class="questionnaire-section__down-arrow-blue"><i class="fa fa-angle-double-down down-arrow"></i></a>
+            </div>
+        </div>
+        <div class="questionnaire-section__questions-wrapper__questionnaire
+            questionnaire-section__questions-wrapper__questionnaire-choice-2" id="questionnaire2">
+            <div class="questionnaire-section__questions-wrapper__questionnaire__container">
+                <h1 class="questionnaire-section__questions-wrapper__questionnaire__title">
+                    Step 2
+                </h1>
+                <h2 class="questionnaire-section__questions-wrapper__questionnaire__sub-title">
+                    Fill in Your Questionnaire (Barrister/Solicitor)
+                </h2>
+                <div class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div">
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__1">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress">
+                            1
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon"></i>
+                    </div>
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__2">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress">
+                            2
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon"></i>
+                    </div>
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__3">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress">
+                            3
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon"></i>
+                    </div>
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__4">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress">
+                            4
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon"></i>
+                    </div>
+                </div>
+                <div class="questionnaire-section__questions-wrapper__questionnaire__container__questions">
+                    <form class="questionnaire-section__questions-wrapper__questionnaire__container__questions__form" id="expertForm">
+                        <ul class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list active-page">
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="answer1" id="answer-1">
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="answer1" id="answer-2">
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="answer1" id="answer-3">
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="answer1" id="answer-4">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <a href="#sendQuestionnaireSection" id="questionnaireScrollArrow3" class="questionnaire-section__down-arrow-blue"><i class="fa fa-angle-double-down down-arrow"></i></a>
+            </div>
+        </div>
+        <div class="questionnaire-section__questions-wrapper__questionnaire
+            questionnaire-section__questions-wrapper__questionnaire-choice-3" id="questionnaire3">
+            <div class="questionnaire-section__questions-wrapper__questionnaire__container">
+                <h1 class="questionnaire-section__questions-wrapper__questionnaire__title">
+                    Step 2
+                </h1>
+                <h2 class="questionnaire-section__questions-wrapper__questionnaire__sub-title">
+                    Fill in Your Questionnaire (Cafcass)
+                </h2>
+                <div class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div">
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__1">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress">
+                            1
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon"></i>
+                    </div>
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__2">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress">
+                            2
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon"></i>
+                    </div>
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__3">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress">
+                            3
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon"></i>
+                    </div>
+                    <div class="
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle
+                    questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__4">
+                        <p class="questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__in-progress">
+                            4
+                        </p>
+                        <i class="fa fa-check fa-5x
+                        questionnaire-section__questions-wrapper__questionnaire__container__progress-div__circle__completed-icon"></i>
+                    </div>
+                </div>
+                <div class="questionnaire-section__questions-wrapper__questionnaire__container__questions">
+                    <form class="questionnaire-section__questions-wrapper__questionnaire__container__questions__form" id="expertForm">
+                        <ul class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list active-page">
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="answer1" id="answer-1">
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="answer1" id="answer-2">
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="answer1" id="answer-3">
+                            </li>
+                            <li class="questionnaire-section__questions-wrapper__questionnaire__container__questions__question-list__question">
+                                Do you like cat's or dog's?
+                                <input type="text" name="answer1" id="answer-4">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+                <a href="#sendQuestionnaireSection" id="questionnaireScrollArrow4" class="questionnaire-section__down-arrow-blue"><i class="fa fa-angle-double-down down-arrow"></i></a>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <section class="questionnaire-section__send-questionnaire-wrapper" id="sendQuestionnaireSection">
+        <h1 class="questionnaire-section__send-questionnaire-wrapper__title">
+            Step 3
+        </h1>
+        <h2 class="questionnaire-section__send-questionnaire-wrapper__sub-title">
+            Enter your details and click send, Voilà!
+        </h2>
+    </section>
+    <script src="node_modules/scrollmagic/scrollmagic/uncompressed/ScrollMagic.js "></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js "></script>
+    <script src="/node_modules/waypoints/lib/noframework.waypoints.min.js "></script>
+    <script src="app.js "></script>
+    <!---------------------------------------------------------------------------------------------------------------------------------------------------------->
+</body>
+
+</html>

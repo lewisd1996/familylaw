@@ -1,0 +1,88 @@
+.contact-section {
+    background-color: $base-color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__header {
+        font-size: 5rem;
+        color: $base-color;
+    }
+}
+
+input[type=text],
+[type=email],
+select,
+textarea {
+    font-size: 2rem;
+    width: 100%;
+    padding: 12px;
+    border: 2px solid $base-color;
+    border-radius: 4px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    background-color: whitesmoke;
+}
+
+label {
+    font-size: 2rem;
+    color: $base-color;
+}
+
+.button-wrapper {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+button[type=submit] {
+    min-width: 20%;
+    background-color: whitesmoke;
+    color: $base-color;
+    padding: 12px 20px;
+    border: 3px solid $base-color;
+    border-radius: 4px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    margin-top: 12.5px;
+}
+
+button[type=submit]:hover {
+    background-color: $base-color-tertiary;
+    color: $base-color;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+    border: 3px solid $base-color;
+    transform: translateY(-1px);
+    -webkit-box-shadow: 0px 22px 30px -17px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 22px 30px -17px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 22px 30px -17px rgba(0, 0, 0, 0.75);
+}
+
+textarea::placeholder {
+    font-size: 2rem;
+}
+
+.contact-textarea {
+    font-size: 2rem;
+}
