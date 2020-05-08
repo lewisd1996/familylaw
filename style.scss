@@ -1,9 +1,17 @@
+//---------------------------------------------------------------------------------
 @import 'sass/utilities/_variables.scss';
 @import 'sass/utilities/_general.scss';
-@import 'sass/components/sections/_footer-tweet.scss';
-@import 'sass/components/sections/_contact.scss';
-@import 'sass/components/sections/_questionnaire.scss';
-@import 'sass/components/sections/_about.scss';
-@import 'sass/components/sections/_landing.scss';
+//---------------------------------------------------------------------------------
 @import 'sass/components/_navbar.scss';
+//---------------------------------------------------------------------------------
+@import 'sass/components/index-sections/_footer-tweet.scss';
+@import 'sass/components/index-sections/_contact.scss';
+@import 'sass/components/index-sections/_questionnaire.scss';
+@import 'sass/components/index-sections/_about.scss';
+@import 'sass/components/index-sections/_landing.scss';
+//---------------------------------------------------------------------------------
+@import 'sass/components/divorce-sections/_banner.scss';
+@import 'sass/components/divorce-sections/_selection.scss';
+@import 'sass/components/divorce-sections/_solicitormd.scss';
+//---------------------------------------------------------------------------------
 @import 'sass/components/questionnaire/questionnaire-general';

@@ -36,7 +36,7 @@ section {
   width: 100%;
   height: 100vh;
   scroll-snap-align: start;
-  padding-left: 100px;
+  margin-left: 5%;
 }
 
 .add-margin {
@@ -54,6 +54,241 @@ section {
 .white-background-btn {
   background-color: #f3f4f4 !important;
   color: #d3e383 !important;
+}
+
+.sidemenu {
+  height: 100vh;
+  width: 25%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #506d6f;
+  z-index: 5001;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-left: -25%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  padding-top: 50px;
+}
+
+.sidemenu ul {
+  list-style: none;
+}
+
+.sidemenu ul li {
+  position: relative;
+  padding: 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.sidemenu ul li:hover a {
+  color: #d3e383;
+  text-decoration: none;
+}
+
+.sidemenu a {
+  position: inherit;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #f3f4f4;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  width: 100%;
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.75;
+}
+
+#menuCheckbox {
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.menu-icon {
+  z-index: 10;
+  position: absolute;
+  top: 30px;
+  opacity: 1;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 40px;
+  height: 5px;
+  background-color: #f3f4f4;
+  margin: 0.5rem 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.changeBar1 {
+  -webkit-transform: translateY(10px) rotate(45deg);
+          transform: translateY(10px) rotate(45deg);
+}
+
+.changeBar3 {
+  -webkit-transform: translateY(-10px) rotate(-45deg);
+          transform: translateY(-10px) rotate(-45deg);
+}
+
+.arrow-background {
+  width: 100%;
+  height: 100px;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+  background-color: #506d6f;
+}
+
+.expand-arrow {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 900;
+  text-align: center;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  color: #f3f4f4;
+  z-index: 10;
+  position: absolute;
+  top: 0;
+}
+
+.email {
+  cursor: pointer;
+  z-index: 5000;
+  font-size: 2rem;
+  color: #506d6f;
+  white-space: nowrap;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  text-align: center;
+  position: absolute;
+  bottom: 10%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.email:hover {
+  color: #f0f6cd;
+  border-bottom: 2px solid #f3f4f4;
+}
+
+.phone-number {
+  cursor: pointer;
+  z-index: 5000;
+  font-size: 2rem;
+  color: #506d6f;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  white-space: nowrap;
+  text-align: center;
+  position: absolute;
+  bottom: 30%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.phone-number:hover {
+  color: #f0f6cd;
+  border-bottom: 2px solid #f3f4f4;
+}
+
+.menu-tab {
+  z-index: 4999;
+  position: fixed;
+  height: 100vh;
+  width: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #d3e383;
+  color: #f3f4f4;
+  cursor: pointer;
+}
+
+.menu-footer {
+  text-align: left;
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #f3f4f4;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+  margin-top: 5rem;
+}
+
+.nav-bar__logo {
+  width: 200px;
+}
+
+.phone-number-background {
+  position: absolute;
+  top: 16.5%;
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
+}
+
+.email-background {
+  position: absolute;
+  bottom: 17.5%;
+  width: 100px;
+  height: 100%;
+  overflow: hidden;
 }
 
 .footer-tweets-section {
@@ -264,28 +499,6 @@ section {
   color: #d3e383;
 }
 
-input[type=text],
-[type=email],
-select,
-textarea {
-  font-size: 2rem;
-  width: 100%;
-  padding: 12px;
-  border: 2px solid #d3e383;
-  border-radius: 4px;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  background-color: whitesmoke;
-}
-
-label {
-  font-size: 2rem;
-  color: #d3e383;
-}
-
 .button-wrapper {
   width: 100%;
   display: -webkit-box;
@@ -297,56 +510,6 @@ label {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-}
-
-button[type=submit] {
-  min-width: 20%;
-  background-color: whitesmoke;
-  color: #d3e383;
-  padding: 12px 20px;
-  border: 3px solid #d3e383;
-  border-radius: 4px;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  margin-top: 12.5px;
-}
-
-button[type=submit]:hover {
-  background-color: #f0f6cd;
-  color: #d3e383;
-  -webkit-transition: all .5s;
-  transition: all .5s;
-  border: 3px solid #d3e383;
-  -webkit-transform: translateY(-1px);
-          transform: translateY(-1px);
-  -webkit-box-shadow: 0px 22px 30px -17px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 22px 30px -17px rgba(0, 0, 0, 0.75);
-}
-
-textarea::-webkit-input-placeholder {
-  font-size: 2rem;
-}
-
-textarea:-ms-input-placeholder {
-  font-size: 2rem;
-}
-
-textarea::-ms-input-placeholder {
-  font-size: 2rem;
-}
-
-textarea::placeholder {
-  font-size: 2rem;
 }
 
 .contact-textarea {
@@ -921,126 +1084,49 @@ textarea::placeholder {
   background-color: #d3e383;
 }
 
-.sidemenu {
-  height: 100vh;
-  width: 25%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: #506d6f;
-  z-index: 5001;
+.divorce-banner {
+  width: 100%;
+  height: 15vh;
+  margin-left: 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10rem;
+}
+
+.divorce-selection {
+  width: 100%;
+  height: 15vh;
+  margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-left: -25%;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  padding-top: 50px;
-}
-
-.sidemenu ul {
-  list-style: none;
-}
-
-.sidemenu ul li {
-  position: relative;
-  padding: 10px 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.sidemenu ul li:hover a {
-  color: #d3e383;
-  text-decoration: none;
-}
-
-.sidemenu a {
-  position: inherit;
-  text-decoration: none;
+  padding-left: 10rem;
   font-size: 2rem;
-  color: #f3f4f4;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  width: 100%;
-  display: inline-block;
+  color: #506d6f;
+}
+
+.divorce-selection__h1 {
+  margin-bottom: 3rem;
+}
+
+.divorce-selection__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  line-height: 1.75;
 }
 
-#menuCheckbox {
-  width: 100%;
-  height: 100px;
-  z-index: 10;
-  position: absolute;
-  top: 0;
-  z-index: 100;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.menu-icon {
-  z-index: 10;
-  position: absolute;
-  top: 30px;
-  opacity: 1;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-  width: 40px;
-  height: 5px;
-  background-color: #f3f4f4;
-  margin: 0.5rem 0;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.changeBar1 {
-  -webkit-transform: translateY(10px) rotate(45deg);
-          transform: translateY(10px) rotate(45deg);
-}
-
-.changeBar3 {
-  -webkit-transform: translateY(-10px) rotate(-45deg);
-          transform: translateY(-10px) rotate(-45deg);
-}
-
-.arrow-background {
-  width: 100%;
-  height: 100px;
-  z-index: 10;
-  position: absolute;
-  top: 0;
-  background-color: #506d6f;
-}
-
-.expand-arrow {
-  width: 100%;
-  height: 100px;
+.divorce-selection__form__option {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1050,63 +1136,143 @@ textarea::placeholder {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-weight: 900;
-  text-align: center;
-  -webkit-transition: all 0.7s;
-  transition: all 0.7s;
+  border: 2px solid #506d6f;
+  border-radius: 1.25rem;
+  height: 6rem;
+  width: 35rem;
+  margin-right: 2rem;
+  position: relative;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.divorce-selection__form__option input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 100;
+  cursor: pointer;
+}
+
+.divorce-selection__form__option label {
+  position: absolute;
+  margin: 0;
+}
+
+.active-service {
+  background-color: #506d6f;
   color: #f3f4f4;
-  z-index: 10;
-  position: absolute;
-  top: 0;
 }
 
-.email {
-  cursor: pointer;
-  z-index: 5000;
+.solicitormd-section {
+  width: 100%;
+  height: auto;
   font-size: 2rem;
   color: #506d6f;
-  white-space: nowrap;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  text-align: center;
-  position: absolute;
-  bottom: 10%;
-  border-bottom: 2px solid transparent;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
-.email:hover {
-  color: #f0f6cd;
-  border-bottom: 2px solid #f3f4f4;
+.solicitormd-section p {
+  width: 80%;
+  font-weight: 300;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
-.phone-number {
-  cursor: pointer;
-  z-index: 5000;
+.solicitormd-section h1 {
+  font-size: 4rem;
+  margin-bottom: 4rem;
+}
+
+.solicitormd-section input[type=text],
+.solicitormd-section input[type=email] {
+  margin-bottom: 4rem;
   font-size: 2rem;
   color: #506d6f;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  white-space: nowrap;
-  text-align: center;
+  padding: 2rem;
+}
+
+.solicitormd-section input,
+.solicitormd-section select {
+  border-radius: 1.25rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  height: 4rem;
+  border: solid 2px #506d6f;
+}
+
+.solicitormd-section__info__start-now {
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section__info__start-now__p {
+  margin-bottom: 4rem;
+}
+
+.solicitormd-section__info__why-choose {
+  padding: 5rem 10rem 5rem 10rem;
+  background-color: #f1f3f2;
+}
+
+.solicitormd-section__info__why-choose__p {
+  margin-bottom: 4rem;
+}
+
+.solicitormd-section__info__five-steps {
+  padding: 5rem 10rem 5rem 10rem;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+
+.solicitormd-section__info__five-steps__step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+.solicitormd-section__info__five-steps__step__h2 {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.solicitormd-section__info__five-steps__step-number {
   position: absolute;
-  bottom: 30%;
-  border-bottom: 2px solid transparent;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  left: 5%;
+  top: auto;
+  width: 7rem;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  margin-right: 5rem;
+  font-size: 4rem;
 }
 
-.phone-number:hover {
-  color: #f0f6cd;
-  border-bottom: 2px solid #f3f4f4;
+.solicitormd-section__info__five-steps__step-number__yellow {
+  background-color: #d3e383;
 }
 
-.menu-tab {
-  z-index: 4999;
-  position: fixed;
-  height: 100vh;
-  width: 100px;
+.solicitormd-section__info__five-steps__step-number__grey {
+  background-color: #506d6f;
+  color: #f3f4f4;
+}
+
+.solicitormd-section__info__five-steps__text-wrapper {
+  margin-left: 10rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1114,46 +1280,283 @@ textarea::placeholder {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
+}
+
+.solicitormd-section__info__five-steps__icon {
+  min-width: 15rem;
+  max-width: 15rem;
+}
+
+.solicitormd-section__info__five-steps__h1 {
+  margin-left: 10rem;
+}
+
+.solicitormd-section__info__five-steps__step-1 {
+  width: 100%;
+  padding: 2.5rem 10rem;
+  position: relative;
+}
+
+.solicitormd-section__info__five-steps__step-2 {
+  padding: 2.5rem 10rem;
+  width: 100%;
+  position: relative;
+  background-color: #f1f3f2;
+}
+
+.solicitormd-section__info__five-steps__step-3 {
+  padding: 2.5rem 10rem;
+  position: relative;
+}
+
+.solicitormd-section__info__five-steps__step-4 {
+  padding: 2.5rem 10rem;
+  position: relative;
+  background-color: #f1f3f2;
+}
+
+.solicitormd-section__info__five-steps__step-5 {
+  padding: 2.5rem 10rem;
+  position: relative;
+}
+
+.solicitormd-section__info__online-service {
+  padding: 5rem 10rem 5rem 10rem;
+  background-color: #f1f3f2;
+}
+
+.solicitormd-section__info__online-service__p {
+  margin-bottom: 4rem;
+}
+
+.solicitormd-section__info__cost {
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section__info__cost__p {
+  margin-bottom: 4rem;
+}
+
+.solicitormd-section__info__form {
+  border-top: 2px solid #506d6f;
+}
+
+.solicitormd-section__info__form__p {
+  font-size: 2rem;
+  margin-bottom: 4rem;
+}
+
+.solicitormd-section__info__form__option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #d3e383;
-  color: #f3f4f4;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #506d6f;
+  border-radius: 1.25rem;
+  height: 6rem;
+  width: 35rem;
+  margin-right: 2rem;
+  position: relative;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.solicitormd-section__info__form__option input {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 100;
+  margin-right: 0 !important;
+  font-size: 1rem;
   cursor: pointer;
 }
 
-.menu-footer {
-  text-align: left;
-  display: block;
-  text-decoration: none;
-  font-size: 2rem;
+.solicitormd-section__info__form__option label {
+  position: absolute;
+  margin: 0 !important;
+}
+
+.solicitormd-section__info__form__q1 {
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section__info__form__q2 {
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section__info__form__details {
+  padding: 5rem 10rem 5rem 10rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.solicitormd-section__info__form__spouse-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section__info__form__q3 {
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section__info__form__q4 {
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section__info__form__q4__row {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 5rem;
+}
+
+.solicitormd-section__info__form__q5 {
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section__info__form__additional-info {
+  padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section__info__form__additional-info__textarea {
+  min-width: 50%;
+  min-height: 20rem;
+  max-width: 80%;
+  max-height: 40rem;
+  border-radius: 1.25rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  border: solid 2px #506d6f;
+  padding: 2rem;
+}
+
+.solicitormd-section__info__form__book-call {
+  padding: 5rem 10rem 5rem 10rem;
+  padding-bottom: 0;
+}
+
+.solicitormd-section__info__form__radio-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 4rem;
+}
+
+.solicitormd-section__info__form__radio-wrapper input {
+  margin-right: 1rem;
+  padding-left: 1rem;
+  height: 5rem;
+  min-width: 2.5rem;
+}
+
+.solicitormd-section__info__form__radio-wrapper label {
+  margin-right: 5rem;
+}
+
+.solicitormd-section__info__form__radio-wrapper select {
+  margin-right: 1rem;
+  height: 5rem;
+  min-width: 7rem;
+}
+
+.solicitormd-section__info__form__submit-btn {
+  margin: 5rem 10rem;
+  width: 30rem;
+  min-height: 50px;
+  background-color: #506d6f;
+  padding: 0px 20px 0 20px;
+  border: none;
+  font-size: 1.5rem;
   color: #f3f4f4;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-  margin-top: 5rem;
+  font-weight: bold;
+  border-radius: 25px;
+  cursor: pointer;
+  -webkit-transition: all .25s;
+  transition: all .25s;
+  border: 3px solid transparent;
 }
 
-.nav-bar__logo {
-  width: 200px;
+.solicitormd-section__info__form__submit-btn:hover {
+  border: 3px solid #506d6f;
+  background-color: transparent;
+  color: #506d6f;
 }
 
-.phone-number-background {
-  position: absolute;
-  top: 16.5%;
-  width: 100px;
-  height: 100%;
-  overflow: hidden;
+.active-answer {
+  background-color: #506d6f;
+  color: #f3f4f4;
 }
 
-.email-background {
-  position: absolute;
-  bottom: 17.5%;
-  width: 100px;
-  height: 100%;
-  overflow: hidden;
+.option-x-long {
+  width: 50rem;
+}
+
+.option-long {
+  width: 30rem;
+}
+
+.input-long {
+  max-width: 40%;
+}
+
+.input-short {
+  max-width: 20%;
+}
+
+.input-x-short {
+  max-width: 10%;
+}
+
+.indent-paragraph {
+  margin-left: 4rem;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+  -webkit-appearance: none;
+}
+
+input::-webkit-input-placeholder {
+  color: #506d6f;
+}
+
+input:-ms-input-placeholder {
+  color: #506d6f;
+}
+
+input::-ms-input-placeholder {
+  color: #506d6f;
+}
+
+input::placeholder {
+  color: #506d6f;
+}
+
+#call-time-p {
+  font-weight: bold;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .questionnaire-section {

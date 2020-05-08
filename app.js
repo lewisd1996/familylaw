@@ -1,8 +1,152 @@
 var Controller = (function() {
-
+    document.getElementById('menuCheckbox').addEventListener('change', function() {
+        if (this.checked) {
+            UIController.openMenu();
+        } else {
+            UIController.closeMenu();
+        }
+    });
     //EVENT LISTENERS-----------------------------------------------------------
-    try {
+    if (document.URL.includes("divorce.html")) {
+        try {
+            //SERVICE SELECTOR-------------------------------------------------------------------------
+            diyService = document.getElementById("diy-service");
+            personalService = document.getElementById("personal-service");
+            consentService = document.getElementById("consent-service");
+            solicitormd = document.getElementById("solicitormd-service");
 
+            diyService.addEventListener('change', function() {
+                diyService.parentElement.classList.add("active-service");
+                personalService.parentElement.classList.remove("active-service");
+                consentService.parentElement.classList.remove("active-service");
+                solicitormd.parentElement.classList.remove("active-service");
+            });
+
+            personalService.addEventListener('change', function() {
+                diyService.parentElement.classList.remove("active-service");
+                personalService.parentElement.classList.add("active-service");
+                consentService.parentElement.classList.remove("active-service");
+                solicitormd.parentElement.classList.remove("active-service");
+            });
+
+            consentService.addEventListener('change', function() {
+                diyService.parentElement.classList.remove("active-service");
+                personalService.parentElement.classList.remove("active-service");
+                consentService.parentElement.classList.add("active-service");
+                solicitormd.parentElement.classList.remove("active-service");
+            });
+
+            solicitormd.addEventListener('change', function() {
+                diyService.parentElement.classList.remove("active-service");
+                personalService.parentElement.classList.remove("active-service");
+                consentService.parentElement.classList.remove("active-service");
+                solicitormd.parentElement.classList.add("active-service");
+            });
+            //Q1 QUESTION SELECTOR-------------------------------------------------------------------------
+            q1Marriage = document.getElementById("q1-marriage");
+            q1Civil = document.getElementById("q1-civil");
+            q1Unsure = document.getElementById("q1-unsure");
+
+            q1Marriage.addEventListener('change', function() {
+                q1Marriage.parentElement.classList.add("active-answer");
+                q1Civil.parentElement.classList.remove("active-answer");
+                q1Unsure.parentElement.classList.remove("active-answer");
+            });
+
+            q1Civil.addEventListener('change', function() {
+                q1Marriage.parentElement.classList.remove("active-answer");
+                q1Civil.parentElement.classList.add("active-answer");
+                q1Unsure.parentElement.classList.remove("active-answer");
+            });
+
+            q1Unsure.addEventListener('change', function() {
+                q1Marriage.parentElement.classList.remove("active-answer");
+                q1Civil.parentElement.classList.remove("active-answer");
+                q1Unsure.parentElement.classList.add("active-answer");
+            });
+            //Q2 QUESTION SELECTOR-------------------------------------------------------------------------
+            q2yes = document.getElementById("q2-yes");
+            q2no = document.getElementById("q2-no");
+
+            q2yes.addEventListener('change', function() {
+                q2yes.parentElement.classList.add("active-answer");
+                q2no.parentElement.classList.remove("active-answer");
+            });
+
+            q2no.addEventListener('change', function() {
+                q2yes.parentElement.classList.remove("active-answer");
+                q2no.parentElement.classList.add("active-answer");
+            });
+            //Q3 QUESTION SELECTOR-------------------------------------------------------------------------
+            q3yes = document.getElementById("q3-yes");
+            q3no = document.getElementById("q3-no");
+
+            q3yes.addEventListener('change', function() {
+                q3yes.parentElement.classList.add("active-answer");
+                q3no.parentElement.classList.remove("active-answer");
+            });
+
+            q3no.addEventListener('change', function() {
+                q3yes.parentElement.classList.remove("active-answer");
+                q3no.parentElement.classList.add("active-answer");
+            });
+            //Q4 QUESTION SELECTOR-------------------------------------------------------------------------
+            q4adultery = document.getElementById("q3-adultery");
+            q4seperated = document.getElementById("q3-seperated");
+            q4unreasonable = document.getElementById("q3-unreasonable");
+            q4explain = document.getElementById("q3-explain");
+            q4discuss = document.getElementById("q3-discuss");
+
+            var question4 = document.getElementById('question4');
+            var checkboxes = question4.getElementsByTagName('input');
+            var checkbox;
+
+            for (i = 0; i < checkboxes.length; ++i) {
+                checkbox = checkboxes[i];
+                checkbox.addEventListener('change', function() {
+                    if (this.checked) {
+                        this.parentElement.classList.add("active-answer");
+                    } else {
+                        this.parentElement.classList.remove("active-answer");
+                    }
+                })
+            }
+            //Q5 QUESTION SELECTOR-------------------------------------------------------------------------
+            q5yes = document.getElementById("q5-yes");
+            q5no = document.getElementById("q5-no");
+
+            q5yes.addEventListener('change', function() {
+                q5yes.parentElement.classList.add("active-answer");
+                q5no.parentElement.classList.remove("active-answer");
+            });
+
+            q5no.addEventListener('change', function() {
+                q5yes.parentElement.classList.remove("active-answer");
+                q5no.parentElement.classList.add("active-answer");
+            });
+            //CALL TIME CALCULATOR-------------------------------------------------------------------------
+            //document.getElementById("call-time-p").style.opacity = "0";
+
+            callDateInput = document.getElementById("input-call-date");
+            callHourInput = document.getElementById("input-call-hour");
+            callAMPMInput = document.getElementById("input-call-ampm");
+
+            spanCallDay = document.getElementById("call-day");
+            spanCallDate = document.getElementById("call-date");
+            spanCallMonth = document.getElementById("call-month");
+            spanCallTime = document.getElementById("call-time");
+
+
+            callDateInput.addEventListener('change', UIController.updateCallTime);
+            callHourInput.addEventListener('change', UIController.updateCallTime);
+            callAMPMInput.addEventListener('change', UIController.updateCallTime);
+
+        } catch {
+            console.log("DOM error");
+        }
+
+    }
+    try {
         BarristerSlide = document.getElementById('BarristerSlide');
         ConsultationSlide = document.getElementById('ConsultationSlide');
         ManagedDivorceSlide = document.getElementById('ManagedDivorceSlide');
@@ -11,23 +155,7 @@ var Controller = (function() {
         menuIconBar1 = document.getElementById('menuIconBar1');
         menuIconBar2 = document.getElementById('menuIconBar2');
         menuIconBar3 = document.getElementById('menuIconBar3');
-        document.getElementById('menuCheckbox').addEventListener('change', function() {
-            if (this.checked) {
-                UIController.openMenu();
-            } else {
-                UIController.closeMenu();
-            }
-        });
-        document.getElementById("option1").addEventListener("click", () => UIController.changeSelection("option1"));
-        document.getElementById("option2").addEventListener("click", () => UIController.changeSelection("option2"));
-        document.getElementById("option3").addEventListener("click", () => UIController.changeSelection("option3"));
-        //-----------------------------------------------------------EXPERT QUESTIONNAIRE EVENT LISTENERS-----------------------------------------------------------
-        expertPrevBtn.addEventListener('click', UIController.pagenationPrevExpert);
-        expertNextBtn.addEventListener('click', UIController.pagenationNextExpert);
-        questionnaireExpertpage1question1.addEventListener('input', UIController.updateExpertQuestionnairePage1);
-        questionnaireExpertpage1question2.addEventListener('input', UIController.updateExpertQuestionnairePage1);
-        questionnaireExpertpage1question3.addEventListener('input', UIController.updateExpertQuestionnairePage1);
-        questionnaireExpertpage1question4.addEventListener('input', UIController.updateExpertQuestionnairePage1);
+
     } catch {
 
     }
@@ -36,64 +164,11 @@ var Controller = (function() {
 var UIController = (function() {
     var slideCounter = 0;
     var ExpertCurrentPage = 1;
-    try {
-        //-----------------------------------------------------------
-        questionnaireScrollArrow1 = document.getElementById("questionnaireScrollArrow1");
-        questionnaireScrollArrow2 = document.getElementById("questionnaireScrollArrow2");
-        questionnaireScrollArrow3 = document.getElementById("questionnaireScrollArrow3");
-        questionnaireScrollArrow4 = document.getElementById("questionnaireScrollArrow4");
-        //-----------------------------------------------------------EXPERT QUESTIONNAIRE DOM STRINGS-----------------------------------------------------------
-
-        //---EXPERT PAGES---
-        questionnaireExpertPage1 = document.getElementById("expertPage1");
-        questionnaireExpertPage2 = document.getElementById("expertPage2");
-        questionnaireExpertPage3 = document.getElementById("expertPage3");
-        questionnaireExpertPage4 = document.getElementById("expertPage4");
-        //---EXPERT QUESTIONS---
-        //---EXPERT PAGE 1--
-        questionnaireExpertpage1question1 = document.getElementById("question-1-page-1-expert");
-        questionnaireExpertpage1question2 = document.getElementById("question-2-page-1-expert");
-        questionnaireExpertpage1question3 = document.getElementById("question-3-page-1-expert");
-        questionnaireExpertpage1question4 = document.getElementById("question-4-page-1-expert");
-        //---EXPERT PAGE 2--
-        questionnaireExpertpage2question1 = document.getElementById("question-1-page-2-expert");
-        questionnaireExpertpage2question2 = document.getElementById("question-2-page-2-expert");
-        questionnaireExpertpage2question3 = document.getElementById("question-3-page-2-expert");
-        questionnaireExpertpage2question4 = document.getElementById("question-4-page-2-expert");
-        //---EXPERT PAGE 3--
-        questionnaireExpertpage3question1 = document.getElementById("question-1-page-3-expert");
-        questionnaireExpertpage3question2 = document.getElementById("question-2-page-3-expert");
-        questionnaireExpertpage3question3 = document.getElementById("question-3-page-3-expert");
-        questionnaireExpertpage3question4 = document.getElementById("question-4-page-3-expert");
-        //---EXPERT PAGE 4--
-        questionnaireExpertpage4question1 = document.getElementById("question-1-page-4-expert");
-        questionnaireExpertpage4question2 = document.getElementById("question-2-page-4-expert");
-        questionnaireExpertpage4question3 = document.getElementById("question-3-page-4-expert");
-        questionnaireExpertpage4question4 = document.getElementById("question-4-page-4-expert");
-        //---EXPERT PROGRESS CIRCLES + ICONS---
-        expertCircle1 = document.getElementById("expertCircle1");
-        expertCircle2 = document.getElementById("expertCircle2");
-        expertCircle3 = document.getElementById("expertCircle3");
-        expertCircle4 = document.getElementById("expertCircle4");
-        expertCurrentPage1Arrow = document.getElementById("expertPage1CurrentArrow");
-        expertCurrentPage2Arrow = document.getElementById("expertPage2CurrentArrow");
-        expertCurrentPage3Arrow = document.getElementById("expertPage3CurrentArrow");
-        expertCurrentPage4Arrow = document.getElementById("expertPage4CurrentArrow");
-        expertPage1InProgress = document.getElementById("expertPage1InProgress");
-        expertPage2InProgress = document.getElementById("expertPage2InProgress");
-        expertPage3InProgress = document.getElementById("expertPage3InProgress");
-        expertPage4InProgress = document.getElementById("expertPage4InProgress");
-        expertPage1Completed = document.getElementById("expertPage1Completed");
-        expertPage2Completed = document.getElementById("expertPage2Completed");
-        expertPage3Completed = document.getElementById("expertPage3Completed");
-        expertPage4Completed = document.getElementById("expertPage4Completed");
-        //---EXPERT PAGE BUTTONS---
-        expertPrevBtn = document.getElementById("expertPrevBtn");
-        expertNextBtn = document.getElementById("expertNextBtn");
-    } catch {
-
-    };
-
+    var callDate;
+    var Day;
+    var DateNum;
+    var Month;
+    var Time;
 
     return {
         //-----------------------------------------------------------
@@ -109,22 +184,27 @@ var UIController = (function() {
             }
         }),
         changeLandingSlide: (function() {
-            slideCounter += 1;
-            if (slideCounter === 1) {
-                BarristerSlide.classList.remove('active-slide');
-                ConsultationSlide.classList.add('active-slide');
-                ManagedDivorceSlide.classList.remove('active-slide');
-            } else if (slideCounter === 2) {
-                BarristerSlide.classList.remove('active-slide');
-                ConsultationSlide.classList.remove('active-slide');
-                ManagedDivorceSlide.classList.add('active-slide');
-            } else if (slideCounter === 3) {
-                BarristerSlide.classList.add('active-slide');
-                ConsultationSlide.classList.remove('active-slide');
-                ManagedDivorceSlide.classList.remove('active-slide');
-            } else if (slideCounter === 4) {
-                slideCounter = 0;
+            try {
+                slideCounter += 1;
+                if (slideCounter === 1) {
+                    BarristerSlide.classList.remove('active-slide');
+                    ConsultationSlide.classList.add('active-slide');
+                    ManagedDivorceSlide.classList.remove('active-slide');
+                } else if (slideCounter === 2) {
+                    BarristerSlide.classList.remove('active-slide');
+                    ConsultationSlide.classList.remove('active-slide');
+                    ManagedDivorceSlide.classList.add('active-slide');
+                } else if (slideCounter === 3) {
+                    BarristerSlide.classList.add('active-slide');
+                    ConsultationSlide.classList.remove('active-slide');
+                    ManagedDivorceSlide.classList.remove('active-slide');
+                } else if (slideCounter === 4) {
+                    slideCounter = 0;
+                }
+            } catch {
+
             }
+
 
         }),
         //-----------------------------------------------------------
@@ -144,6 +224,72 @@ var UIController = (function() {
             var contactScene = new ScrollMagic.Scene({
                 triggerElement: '#contactSection'
             }).setClassToggle('#contact-link', 'nav-bar__ul__nav-link__active').addTo(scrollController);
+        }),
+        updateCallTime: (function() {
+
+            callDate = new Date(callDateInput.value);
+            Day = callDate.getDay();
+            DateNum = callDate.getDate();
+            Month = callDate.getMonth() + 1;
+
+
+            if (Day === 1) {
+                Day = "Monday";
+            } else if (Day === 2) {
+                Day = "Tuesday";
+            } else if (Day === 3) {
+                Day = "Wednesday";
+            } else if (Day === 4) {
+                Day = "Thursday";
+            } else if (Day === 5) {
+                Day = "Friday";
+            } else if (Day === 6) {
+                Day = "Saturday";
+            } else if (Day === 0) {
+                Day = "Sunday";
+            } else {
+                Day = "error";
+            }
+
+            function getNumberWithOrdinal(n) {
+                var s = ["th", "st", "nd", "rd"],
+                    v = n % 100;
+                return n + (s[(v - 20) % 10] || s[v] || s[0]);
+            }
+
+            //spanCallDate.innerHTML = getNumberWithOrdinal(DateNum);
+
+            if (Month === 1) {
+                Month = "January";
+            } else if (Month === 2) {
+                Month = "Febuary";
+            } else if (Month === 3) {
+                Month = "March";
+            } else if (Month === 4) {
+                Month = "April";
+            } else if (Month === 5) {
+                Month = "May";
+            } else if (Month === 6) {
+                Month = "June";
+            } else if (Month === 7) {
+                Month = "July";
+            } else if (Month === 8) {
+                Month = "August";
+            } else if (Month === 10) {
+                Month = "September";
+            } else if (Month === 11) {
+                Month = "November";
+            } else if (Month === 12) {
+                Month = "December";
+            } else {
+                Month = "error";
+            }
+
+            Time = callHourInput.value + callAMPMInput.value;
+            //spanCallTime.innerHTML = Time;
+            document.getElementById('call-time-p').innerHTML = "We'll call you on " + Day + " " + getNumberWithOrdinal(DateNum) + " " + Month + " at " + Time;
+
+            //document.getElementById("please-select-date-p").style.opacity = "0";
         }),
         //-----------------------------------------------------------
         moveArrowDown: (function() {
@@ -396,19 +542,14 @@ var UIController = (function() {
 
 document.addEventListener('DOMContentLoaded', (event) => {
     Controller();
-    setInterval(UIController.changeLandingSlide, 8000);
-    UIController.createNewsSelector();
-    UIController.hideNewsSelector();
-    //-----------------------------------------------------------
+
     try {
-        UIController.updateCurrentExpertPageArrow();
-        //-----------------------------------------------------------
-        UIController.changeSelection("option1");
-        //-----------------------------------------------------------
-        document.getElementById('expertForm').reset();
-        //-----------------------------------------------------------
+        setInterval(UIController.changeLandingSlide, 8000);
+        UIController.createNewsSelector();
+        UIController.hideNewsSelector();
     } catch {
 
     }
+
 
 })

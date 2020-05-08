@@ -1,0 +1,295 @@
+@mixin section-div {
+    padding: 5rem 10rem 5rem 10rem;
+}
+
+.solicitormd-section {
+    width: 100%;
+    height: auto;
+    font-size: 2rem;
+    color: $base-color-grey-dark;
+    & p {
+        width: 80%;
+        font-weight: 300;
+        transition: all 1s;
+    }
+    & h1 {
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+    & input[type=text],
+    input[type=email] {
+        margin-bottom: 4rem;
+        font-size: 2rem;
+        color: $base-color-grey-dark;
+        padding: 2rem;
+    }
+    & input,
+    select {
+        border-radius: 1.25rem;
+        box-shadow: none;
+        border: none;
+        height: 4rem;
+        border: solid 2px $base-color-grey-dark;
+    }
+    &__info {
+        &__start-now {
+            @include section-div;
+            &__p {
+                margin-bottom: 4rem;
+            }
+        }
+        &__why-choose {
+            @include section-div;
+            background-color: $base-color-grey-light;
+            &__p {
+                margin-bottom: 4rem;
+            }
+        }
+        &__five-steps {
+            @include section-div;
+            padding-left: 0;
+            padding-bottom: 0;
+            &__step {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                &__h2 {
+                    font-size: 2rem;
+                    margin-bottom: 4rem;
+                }
+            }
+            &__step-number {
+                position: absolute;
+                left: 5%;
+                top: auto;
+                width: 7rem;
+                height: 7rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                margin-right: 5rem;
+                font-size: 4rem;
+                &__yellow {
+                    background-color: $base-color;
+                }
+                &__grey {
+                    background-color: $base-color-grey-dark;
+                    color: $base-color-white;
+                }
+            }
+            &__text-wrapper {
+                margin-left: 10rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start !important;
+            }
+            &__icon {
+                min-width: 15rem;
+                max-width: 15rem;
+            }
+            &__h1 {
+                margin-left: 10rem;
+            }
+            &__step-1 {
+                width: 100%;
+                padding: 2.5rem 10rem;
+                position: relative;
+            }
+            &__step-2 {
+                padding: 2.5rem 10rem;
+                width: 100%;
+                position: relative;
+                background-color: $base-color-grey-light;
+            }
+            &__step-3 {
+                padding: 2.5rem 10rem;
+                position: relative;
+            }
+            &__step-4 {
+                padding: 2.5rem 10rem;
+                position: relative;
+                background-color: $base-color-grey-light;
+            }
+            &__step-5 {
+                padding: 2.5rem 10rem;
+                position: relative;
+            }
+        }
+        &__online-service {
+            @include section-div;
+            background-color: $base-color-grey-light;
+            &__p {
+                margin-bottom: 4rem;
+            }
+        }
+        &__cost {
+            @include section-div;
+            &__p {
+                margin-bottom: 4rem;
+            }
+        }
+        &__form {
+            border-top: 2px solid $base-color-grey-dark;
+            &__p {
+                font-size: 2rem;
+                margin-bottom: 4rem;
+            }
+            &__option {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid $base-color-grey-dark;
+                border-radius: 1.25rem;
+                height: 6rem;
+                width: 35rem;
+                margin-right: 2rem;
+                position: relative;
+                transition: all .2s;
+                & input {
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    z-index: 100;
+                    margin-right: 0 !important;
+                    font-size: 1rem;
+                    cursor: pointer;
+                }
+                & label {
+                    position: absolute;
+                    margin: 0 !important;
+                }
+            }
+            &__q1 {
+                @include section-div;
+            }
+            &__q2 {
+                @include section-div;
+            }
+            &__details {
+                @include section-div;
+                display: flex;
+                flex-direction: column;
+            }
+            &__spouse-details {
+                display: flex;
+                flex-direction: column;
+                @include section-div;
+            }
+            &__q3 {
+                @include section-div;
+            }
+            &__q4 {
+                @include section-div;
+                &__row {
+                    width: 100%;
+                    display: flex;
+                    margin-bottom: 5rem;
+                }
+            }
+            &__q5 {
+                @include section-div;
+            }
+            &__additional-info {
+                @include section-div;
+                &__textarea {
+                    min-width: 50%;
+                    min-height: 20rem;
+                    max-width: 80%;
+                    max-height: 40rem;
+                    border-radius: 1.25rem;
+                    box-shadow: none;
+                    border: none;
+                    border: solid 2px $base-color-grey-dark;
+                    padding: 2rem;
+                }
+            }
+            &__book-call {
+                @include section-div;
+                padding-bottom: 0;
+            }
+            &__radio-wrapper {
+                display: flex;
+                margin-bottom: 4rem;
+                & input {
+                    margin-right: 1rem;
+                    padding-left: 1rem;
+                    height: 5rem;
+                    min-width: 2.5rem;
+                }
+                & label {
+                    margin-right: 5rem;
+                }
+                & select {
+                    margin-right: 1rem;
+                    height: 5rem;
+                    min-width: 7rem;
+                }
+            }
+            &__submit-btn {
+                margin: 5rem 10rem;
+                width: 30rem;
+                min-height: 50px;
+                background-color: $base-color-grey-dark;
+                padding: 0px 20px 0 20px;
+                border: none;
+                font-size: 1.5rem;
+                color: $base-color-white;
+                font-weight: bold;
+                border-radius: 25px;
+                cursor: pointer;
+                transition: all .25s;
+                border: 3px solid transparent;
+                &:hover {
+                    border: 3px solid $base-color-grey-dark;
+                    background-color: transparent;
+                    color: $base-color-grey-dark;
+                }
+            }
+        }
+    }
+}
+
+.active-answer {
+    background-color: $base-color-grey-dark;
+    color: $base-color-white;
+}
+
+.option-x-long {
+    width: 50rem;
+}
+
+.option-long {
+    width: 30rem;
+}
+
+.input-long {
+    max-width: 40%;
+}
+
+.input-short {
+    max-width: 20%;
+}
+
+.input-x-short {
+    max-width: 10%;
+}
+
+.indent-paragraph {
+    margin-left: 4rem;
+}
+
+input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+    -webkit-appearance: none;
+}
+
+input::placeholder {
+    color: $base-color-grey-dark;
+}
+
+#call-time-p {
+    font-weight: bold;
+    transition: all .5s;
+}
