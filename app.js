@@ -43,39 +43,41 @@ var Controller = (function() {
                 solicitormd.parentElement.classList.add("active-service");
             });
             //Q1 QUESTION SELECTOR-------------------------------------------------------------------------
-            q1Marriage = document.getElementById("q1-marriage");
-            q1Civil = document.getElementById("q1-civil");
-            q1Unsure = document.getElementById("q1-unsure");
+            q1Yes = document.getElementById("q1-marriage");
+            q1No = document.getElementById("q1-civil");
+            q1Conference = document.getElementById("q1-unsure");
 
-            q1Marriage.addEventListener('change', function() {
-                q1Marriage.parentElement.classList.add("active-answer");
-                q1Civil.parentElement.classList.remove("active-answer");
-                q1Unsure.parentElement.classList.remove("active-answer");
+            q1Yes.addEventListener('change', function() {
+                q1Yes.parentElement.classList.add("active-answer");
+                q1No.parentElement.classList.remove("active-answer");
+                q1Conference.parentElement.classList.remove("active-answer");
             });
 
-            q1Civil.addEventListener('change', function() {
-                q1Marriage.parentElement.classList.remove("active-answer");
-                q1Civil.parentElement.classList.add("active-answer");
-                q1Unsure.parentElement.classList.remove("active-answer");
+            q1No.addEventListener('change', function() {
+                q1Yes.parentElement.classList.remove("active-answer");
+                q1No.parentElement.classList.add("active-answer");
+                q1Conference.parentElement.classList.remove("active-answer");
             });
 
-            q1Unsure.addEventListener('change', function() {
-                q1Marriage.parentElement.classList.remove("active-answer");
-                q1Civil.parentElement.classList.remove("active-answer");
-                q1Unsure.parentElement.classList.add("active-answer");
+            q1Conference.addEventListener('change', function() {
+                q1Yes.parentElement.classList.remove("active-answer");
+                q1No.parentElement.classList.remove("active-answer");
+                q1Conference.parentElement.classList.add("active-answer");
             });
             //Q2 QUESTION SELECTOR-------------------------------------------------------------------------
-            q2yes = document.getElementById("q2-yes");
-            q2no = document.getElementById("q2-no");
+            q2Applicant = document.getElementById("q2-yes");
+            q2Respondent = document.getElementById("q2-no");
 
-            q2yes.addEventListener('change', function() {
-                q2yes.parentElement.classList.add("active-answer");
-                q2no.parentElement.classList.remove("active-answer");
+            q2Applicant.addEventListener('change', function() {
+                q2Applicant.parentElement.classList.add("active-answer");
+                q2Respondent
+                    .parentElement.classList.remove("active-answer");
             });
 
-            q2no.addEventListener('change', function() {
-                q2yes.parentElement.classList.remove("active-answer");
-                q2no.parentElement.classList.add("active-answer");
+            q2Respondent.addEventListener('change', function() {
+                q2Applicant.parentElement.classList.remove("active-answer");
+                q2Respondent
+                    .parentElement.classList.add("active-answer");
             });
             //Q3 QUESTION SELECTOR-------------------------------------------------------------------------
             q3yes = document.getElementById("q3-yes");
@@ -146,6 +148,7 @@ var Controller = (function() {
         }
 
     }
+
     try {
         BarristerSlide = document.getElementById('BarristerSlide');
         ConsultationSlide = document.getElementById('ConsultationSlide');
@@ -159,6 +162,104 @@ var Controller = (function() {
     } catch {
 
     }
+
+    if (document.URL.includes("matters.html")) {
+        try {
+            //SERVICE SELECTOR-------------------------------------------------------------------------
+            consultationsService = document.getElementById("consultations-service");
+            helpandassistService = document.getElementById("helpandassist-service");
+            managedcasesService = document.getElementById("managed-cases-service");
+            directaccessService = document.getElementById("directaccess-service");
+
+            directaccessService.checked = true;
+
+            consultationsService.addEventListener('change', function() {
+                consultationsService.parentElement.classList.add("active-service");
+                helpandassistService.parentElement.classList.remove("active-service");
+                managedcasesService.parentElement.classList.remove("active-service");
+                directaccessService.parentElement.classList.remove("active-service");
+            });
+
+            helpandassistService.addEventListener('change', function() {
+                consultationsService.parentElement.classList.remove("active-service");
+                helpandassistService.parentElement.classList.add("active-service");
+                managedcasesService.parentElement.classList.remove("active-service");
+                directaccessService.parentElement.classList.remove("active-service");
+            });
+
+            managedcasesService.addEventListener('change', function() {
+                consultationsService.parentElement.classList.remove("active-service");
+                helpandassistService.parentElement.classList.remove("active-service");
+                managedcasesService.parentElement.classList.add("active-service");
+                directaccessService.parentElement.classList.remove("active-service");
+            });
+
+            directaccessService.addEventListener('change', function() {
+                consultationsService.parentElement.classList.remove("active-service");
+                helpandassistService.parentElement.classList.remove("active-service");
+                managedcasesService.parentElement.classList.remove("active-service");
+                directaccessService.parentElement.classList.add("active-service");
+            });
+            //Q1 QUESTION SELECTOR-------------------------------------------------------------------------
+            q1Yes = document.getElementById("q1-yes");
+            q1No = document.getElementById("q1-no");
+            q1Conference = document.getElementById("q1-conference");
+
+            q1Yes.addEventListener('change', function() {
+                q1Yes.parentElement.classList.add("active-answer");
+                q1No.parentElement.classList.remove("active-answer");
+                q1Conference.parentElement.classList.remove("active-answer");
+            });
+
+            q1No.addEventListener('change', function() {
+                q1Yes.parentElement.classList.remove("active-answer");
+                q1No.parentElement.classList.add("active-answer");
+                q1Conference.parentElement.classList.remove("active-answer");
+            });
+
+            q1Conference.addEventListener('change', function() {
+                q1Yes.parentElement.classList.remove("active-answer");
+                q1No.parentElement.classList.remove("active-answer");
+                q1Conference.parentElement.classList.add("active-answer");
+            });
+
+            //Q2 QUESTION SELECTOR-------------------------------------------------------------------------
+            q2Applicant = document.getElementById("q2-applicant");
+            q2Respondent = document.getElementById("q2-respondent");
+
+            q2Applicant.addEventListener('change', function() {
+                q2Applicant.parentElement.classList.add("active-answer");
+                q2Respondent.parentElement.classList.remove("active-answer");
+            });
+
+            q2Respondent.addEventListener('change', function() {
+                q2Applicant.parentElement.classList.remove("active-answer");
+                q2Respondent.parentElement.classList.add("active-answer");
+            });
+
+            //Q4 QUESTION SELECTOR-------------------------------------------------------------------------
+            var question4 = document.getElementById("question4");
+            var inputsq4 = question4.getElementsByTagName("input");
+            var inputq4;
+            for (i = 0; i < inputsq4.length; ++i) {
+                inputq4 = inputsq4[i];
+                inputq4.addEventListener("change", UIController.mattersUpdateQuestion4);
+            }
+
+            //Q5 QUESTION SELECTOR-------------------------------------------------------------------------
+            var question5 = document.getElementById("question5");
+            var inputsq5 = question5.getElementsByTagName("input");
+            var inputq5;
+            for (i = 0; i < inputsq5.length; ++i) {
+                inputq5 = inputsq5[i];
+                inputq5.addEventListener("change", UIController.mattersUpdateQuestion5);
+            }
+
+        } catch {
+
+        }
+    }
+
 });
 //-----------------------------------------------------------
 var UIController = (function() {
@@ -169,6 +270,9 @@ var UIController = (function() {
     var DateNum;
     var Month;
     var Time;
+    var question4 = document.getElementById("question4");
+    var question5 = document.getElementById("question5");
+
 
     return {
         //-----------------------------------------------------------
@@ -533,6 +637,32 @@ var UIController = (function() {
                 UIController.resetCurrentExpertPageArrow();
                 expertCurrentPage4Arrow.classList.add('active-arrow');
                 expertNextBtn.classList.add('disable-button');
+            }
+        }),
+        mattersUpdateQuestion4: (function() {
+            var inputs = question4.getElementsByTagName("input");
+            var input;
+
+            for (i = 0; i < inputs.length; ++i) {
+                input = inputs[i];
+                if (input.checked === true) {
+                    input.parentElement.classList.add("active-answer");
+                } else {
+                    input.parentElement.classList.remove("active-answer");
+                }
+            }
+        }),
+        mattersUpdateQuestion5: (function() {
+            var inputs = question5.getElementsByTagName("input");
+            var input;
+
+            for (i = 0; i < inputs.length; ++i) {
+                input = inputs[i];
+                if (input.checked === true) {
+                    input.parentElement.classList.add("active-answer");
+                } else {
+                    input.parentElement.classList.remove("active-answer");
+                }
             }
         })
 
